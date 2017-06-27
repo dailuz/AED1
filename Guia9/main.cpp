@@ -74,12 +74,12 @@ int main (){
 
     /*string s1 = "dadantepe";
     string s2 = "idrtsujdgno";
-    */
+
 	string s3 = "Hola#Mundo#Maravilloso";
 
 	string s = "Esta#es#una#cadena#de#caracteres#a#partir#en#muchas#lineas";
 
-	int c = 10;
+	int c = 10;*/
 
     //cout << esSubsecuencia (s1,s2);
 
@@ -89,9 +89,19 @@ int main (){
 
     //cout << ordenInverso(s3);
 
+	vector <string> vec4 (3);
+	vec4 [0] = "justifying#lines#by########";
+	vec4 [1] = "inserting#extra#blanks#is##";
+	vec4 [2] = "one#task#of#a#text#editor.#";
+
+	for (int i = 0; i < justificar(vec4).size(); i++){
+			cout  << justificar(vec4)[i] << endl;
+	}
+
 	/*for (int i = 0; i < partirEnLineas(s,c).size(); i++){
 		cout  << partirEnLineas(s,c)[i] << endl;
 	}*/
+
 
     return 0;
 }
