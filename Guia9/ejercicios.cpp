@@ -350,6 +350,49 @@ string ordenInverso (string s){
 
 // EJERCICIO 13
 
+vector <string> justificar (vector <string> vec){
+	vector <string> result;
+	int i;
+	int cantNumeralesAlFinal;
+	string aux;
+	int cantPalabras;
+	int cantNumeralesAAgregar;
+	int h;
+
+	for (int j = 0; j < vec.size(); j++){
+		i = vec[j].size() - 1;
+		cantNumeralesAlFinal = 0;
+		cantPalabras = 0;
+		aux = "";
+		while (vec[j][i] == '#' && i >= 0){
+			cantNumeralesAlFinal++;
+			i--;
+		}
+		for (int k = 0; k < vec[j].size() - 1 - cantNumeralesAlFinal; k++){
+			if (vec[j][k] == '#'){
+				cantPalabras++;
+			}
+		}
+
+		cantNumeralesAAgregar = cantNumeralesAlFinal / cantPalabras;
+
+		for (int k = 0; k < vec[j].size() - 1; k++){
+			if (vec[j][k] != '#'){
+				aux = aux + vec [j][k];
+			}
+			if (vec[j][k] == '#' && vec[j][k+1] != '#'){
+				h = 0;
+				while (h <= cantNumeralesAAgregar){
+					aux = aux + '#';
+					h++;
+				}
+			}
+		}
+		result.push_back (aux);
+	}
+
+	return result;
+}
 
 
 // EJERCICIO 14
@@ -391,3 +434,4 @@ vector <string> partirEnLineas (string s, int c){
 
 	return result;
 }
+
