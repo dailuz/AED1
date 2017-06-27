@@ -29,4 +29,6 @@ string substringL (string s, int l);
 
 string ordenInverso (string s);
 
+vector <string> justificar (vector <string> vec)
+
 vector <string> partirEnLineas (string s, int c);
