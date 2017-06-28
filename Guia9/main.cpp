@@ -127,7 +127,7 @@ int main (){
 		}
 	cout << endl << bubbleSort(vec5).second << " pasos";*/
 
-	vector <int> v1 (5);
+	/*vector <int> v1 (5);
 	v1 [0] = 1;
 	v1 [1] = 2;
 	v1 [2] = 3;
@@ -180,6 +180,94 @@ int main (){
 			cout << ordenar(v6)[i].first[j];
 		}
 		cout << ": " << ordenar(v6)[i].second << " pasos" << endl;
+	}*/
+
+	/*vector <int> vec7 (12);
+	vec7 [0] = 3;
+	vec7 [1] = 1;
+	vec7 [2] = -2;
+	vec7 [3] = 0;
+	vec7 [4] = 2;
+	vec7 [5] = -2;
+	vec7 [6] = -2;
+	vec7 [7] = -2;
+	vec7 [8] = 3;
+	vec7 [9] = 10;
+	vec7 [10] = 0;
+	vec7 [11] = 4;
+
+	cout << cantCeros (vec7) << endl;
+
+	cout << elMasRepetido (vec7) << endl;
+
+	cout << difMaximoYMinimo (vec7) << endl;
+
+	vector <int> vec8 (10);
+	vec8 [0] = 2;
+	vec8 [1] = 2;
+	vec8 [2] = 2;
+	vec8 [3] = 2;
+	vec8 [4] = 2;
+	vec8 [5] = 23;
+	vec8 [6] = 23;
+	vec8 [7] = 64;
+	vec8 [8] = 64;
+	vec8 [9] = 64;
+
+	cout << cantCerosOrdenado (vec8) << endl;
+
+	cout << elMasRepetidoOrdenado (vec8) << endl;
+
+	cout << difMaximoYMinimoOrdenado (vec8) << endl;*/
+
+	/*vector <int> vec9 (6);
+	vec9 [0] = 0;
+	vec9 [1] = 1;
+	vec9 [2] = 0;
+	vec9 [3] = 0;
+	vec9 [4] = 1;
+	vec9 [5] = 1;
+
+	cout << sumaCerosYUnos (vec9);*/
+
+	/*vector <int> vec10 (6);
+	vec10 [0] = 0;
+	vec10 [1] = 0;
+	vec10 [2] = 1;
+	vec10 [3] = 1;
+	vec10 [4] = 1;
+	vec10 [5] = 1;
+
+	cout << sumaCerosYUnosOrdenado (vec10);*/
+
+	/*vector <int> vec11 (6);
+	vec11 [0] = 15;
+	vec11 [1] = 15;
+	vec11 [2] = 15;
+	vec11 [3] = 15;
+	vec11 [4] = 22;
+	vec11 [5] = 22;
+
+	cout << suma15y22 (vec11);*/
+
+	vector <int> vec12 (5);
+	vec12 [0] = -6;
+	vec12 [1] = -1;
+	vec12 [2] = 2;
+	vec12 [3] = 9;
+	vec12 [4] = 28;
+
+	vector <int> vec13 (7);
+	vec13 [0] = -3;
+	vec13 [1] = 0;
+	vec13 [2] = 1;
+	vec13 [3] = 9;
+	vec13 [4] = 11;
+	vec13 [5] = 15;
+	vec13 [6] = 22;
+
+	for (int i = 0; i < merge(vec12, vec13).size(); i++){
+		cout << merge(vec12, vec13)[i] << ",";
 	}
 
     return 0;
