@@ -112,22 +112,8 @@ int main (){
 	vec5 [5] = -3;
 	vec5 [6] = 0;
 
-	/*for (int i = 0; i < insertionSort(vec5).first.size(); i++){
-		cout << insertionSort(vec5).first[i] << ",";
-	}
-	cout << endl << insertionSort(vec5).second << " pasos" << endl;
 
-	for (int i = 0; i < selectionSort(vec5).first.size(); i++){
-		cout << selectionSort(vec5).first[i] << ",";
-	}
-	cout << endl << selectionSort(vec5).second << " pasos" << endl;
-
-	for (int i = 0; i < bubbleSort(vec5).first.size(); i++){
-			cout << bubbleSort(vec5).first[i] << ",";
-		}
-	cout << endl << bubbleSort(vec5).second << " pasos";*/
-
-	/*vector <int> v1 (5);
+	vector <int> v1 (5);
 	v1 [0] = 1;
 	v1 [1] = 2;
 	v1 [2] = 3;
@@ -175,7 +161,23 @@ int main (){
 	v6 [5] = 4;
 	v6 [6] = 6;
 
-	for (int i = 0; i < ordenar(v6).size(); i++){
+	/*for (int i = 0; i < insertionSort(v5).first.size(); i++){
+		cout << insertionSort(v5).first[i] << ",";
+	}
+	cout << endl << insertionSort(v5).second << " pasos" << endl;*/
+
+	/*for (int i = 0; i < selectionSort(v5).first.size(); i++){
+		cout << selectionSort(v5).first[i] << ",";
+	}
+	cout << endl << selectionSort(v5).second << " pasos" << endl;*/
+
+	/*for (int i = 0; i < bubbleSort(v5).first.size(); i++){
+			cout << bubbleSort(v5).first[i] << ",";
+		}
+	cout << endl << bubbleSort(v5).second << " pasos";*/
+
+
+	/*for (int i = 0; i < ordenar(v6).size(); i++){
 		for (int j = 0; j < ordenar(v6)[i].first.size(); j++){
 			cout << ordenar(v6)[i].first[j];
 		}
