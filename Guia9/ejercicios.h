@@ -29,7 +29,22 @@ vector <string> partirEnLineas (string s, int c);
 // 3RA PARTE: ORDENAMIENTO, BUSQUEDA LINEAL Y BUSQUEDA BINARIA
 
 void swap (int &a, int &b);
-vector <pair <string, int> > ordenar (vector <int> vec);
 pair <vector <int>, int> insertionSort (vector <int> vec);
 pair <vector <int>, int> selectionSort (vector <int> vec);
 pair <vector <int>, int> bubbleSort (vector <int> vec);
+vector <pair <string, int> > ordenar (vector <int> vec);
+int cantCeros (vector <int> vec);
+int cantApariciones (vector<int> vec, int e);
+int elMasRepetido (vector <int> vec);
+int maximo (vector <int> vec);
+int minimo (vector <int> vec);
+int difMaximoYMinimo (vector <int> vec);
+int cantCerosOrdenado (vector <int> vec);
+int elMasRepetidoOrdenado (vector <int> vec);
+int difMaximoYMinimoOrdenado (vector <int> vec);
+int sumaCerosYUnos (vector <int> vec);
+int sumaCerosYUnosOrdenado (vector <int> vec);
+int suma15y22 (vector <int> vec);
+vector <int> reconstruye (vector <int> vec);
+vector <int> dosMitades (vector <int> vec);
+vector <int> merge (vector <int> vec1, vector <int> vec2);
