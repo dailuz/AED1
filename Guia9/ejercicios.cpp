@@ -100,7 +100,6 @@ vector <int> infrasecuenciaMasLarga (vector <int> vec){
 }
 
 
-
 // EJERCICIO 4
 
 vector <pair <int, int> > productoCartesiano (vector <int> vec, vector <int> vec2){
@@ -196,6 +195,7 @@ int sumar (vector <int> vec, int desde, int hasta){
 	return suma;
 }
 
+
 // EJERCICIO 7
 
 int indiceSumasIguales (vector <int> vec){
@@ -208,6 +208,7 @@ int indiceSumasIguales (vector <int> vec){
 
 	return i;
 }
+
 
 // EJERCICIO 8
 
@@ -435,3 +436,89 @@ vector <string> partirEnLineas (string s, int c){
 	return result;
 }
 
+
+/*************************************************************
+  3RA PARTE: ORDENAMIENTO, BUSQUEDA LINEAL Y BUSQUEDA BINARIA
+**************************************************************/
+
+// AUX
+
+void swap (int &a, int &b){
+	int aux = a;
+	a = b;
+	b = aux;
+}
+
+// EJERCICIO 16
+
+vector <pair <string, int> > ordenar (vector <int> vec){
+	vector <pair <string, int> > result;
+	result.push_back(make_pair ("insertion", insertionSort(vec).second));
+	result.push_back(make_pair ("selection", selectionSort(vec).second));
+	result.push_back(make_pair ("bubble", bubbleSort(vec).second));
+	return result;
+}
+
+pair <vector <int>, int> insertionSort (vector <int> vec){
+	pair <vector <int>, int> result;
+	int cont = 0;
+	int i = 1;
+
+	while (i < vec.size()){
+		while ((vec[i] < vec[i-1]) && i > 0){
+			swap(vec[i],vec[i-1]);
+			i--;
+			cont++;
+		}
+		i++;
+	}
+
+	result = make_pair(vec,cont);
+	return result;
+}
+
+pair <vector <int>, int> selectionSort (vector <int> vec){
+	pair <vector <int>, int> result;
+	int i = 0;
+	int cont = 0;
+	while (i < vec.size()-1){
+		int j = i + 1;
+		while (j < vec.size() && vec[i] < vec[j]){
+			j++;
+			cont++;
+		}
+		if (j != vec.size()){
+			swap (vec[i],vec[j]);
+			i--;
+			cont++;
+		}
+		i++;
+	}
+
+	result = make_pair(vec,cont);
+	return result;
+}
+
+pair <vector <int>, int> bubbleSort (vector <int> vec){
+	pair <vector <int>, int> result;
+	int cont = 0;
+	int i = 0;
+	while (i < vec.size() - 1){
+		int j = 0;
+		while (j < vec.size() - 1){
+			if (vec[j] > vec[j+1]){
+				swap (vec[j], vec[j+1]);
+				cont++;
+			}
+			j++;
+			cont++;
+		}
+		i++;
+		cont++;
+	}
+
+
+
+	result = make_pair(vec,cont);
+	return result;
+}
