@@ -140,7 +140,7 @@ int distanciaDeHamming (vector <int> vec1, vector <int> vec2){
 	int result = 0;
 	for (int i = 0; i < vec1.size(); i++){
 		if (vec1[i] != vec2[i]){
-			result++;
+			result++;}
 		}
 	}
 	return result;
@@ -191,7 +191,7 @@ int sumar (vector <int> vec, int desde, int hasta){
 	int suma = 0;
 	for (int i = desde; i <= hasta; i++){
 		suma = suma + vec[i];
-	}
+	}}
 	return suma;
 }
 
@@ -263,7 +263,7 @@ bool esSubsecuencia (string s1, string s2){
 	}
 
 	return j == s1.size();
-}
+}}
 
 
 //  EJERCICIO 10
@@ -449,16 +449,6 @@ void swap (int &a, int &b){
 	b = aux;
 }
 
-// EJERCICIO 16
-
-vector <pair <string, int> > ordenar (vector <int> vec){
-	vector <pair <string, int> > result;
-	result.push_back(make_pair ("insertion", insertionSort(vec).second));
-	result.push_back(make_pair ("selection", selectionSort(vec).second));
-	result.push_back(make_pair ("bubble", bubbleSort(vec).second));
-	return result;
-}
-
 pair <vector <int>, int> insertionSort (vector <int> vec){
 	pair <vector <int>, int> result;
 	int cont = 0;
@@ -517,8 +507,187 @@ pair <vector <int>, int> bubbleSort (vector <int> vec){
 		cont++;
 	}
 
-
-
 	result = make_pair(vec,cont);
+	return result;
+}
+
+
+// EJERCICIO 16
+
+vector <pair <string, int> > ordenar (vector <int> vec){
+	vector <pair <string, int> > result;
+	result.push_back(make_pair ("insertion", insertionSort(vec).second));
+	result.push_back(make_pair ("selection", selectionSort(vec).second));
+	result.push_back(make_pair ("bubble", bubbleSort(vec).second));
+	return result;
+}
+
+
+// EJERCICIO 17 1
+
+int cantCeros (vector <int> vec){
+	int cant = 0;
+	for (int i = 0; i < vec.size(); i++){
+		if (vec[i] == 0){
+			cant++;
+		}
+	}
+	return cant;
+}
+
+
+// AUX
+
+int cantApariciones (vector<int> vec, int e){
+	int cant = 0;
+	for (int i = 0; i < vec.size(); i++){
+		if (vec[i] == e){
+			cant++;
+		}
+	}
+	return cant;
+}
+
+
+// EJERCICIO 17 2
+
+int elMasRepetido (vector <int> vec){
+	int masRepetido = vec[0];
+	for (int i = 0; i < vec.size(); i++){
+		if (cantApariciones(vec,vec[i]) > cantApariciones(vec,masRepetido)){
+			masRepetido = vec[i];
+		}
+	}
+	return masRepetido;
+}
+
+
+// AUX
+
+int maximo (vector <int> vec){
+	int max = vec[0];
+	for (int i = 0; i < vec.size(); i++){
+		if (vec[i] > max){
+			max = vec[i];
+		}
+	}
+	return max;
+}
+
+int minimo (vector <int> vec){
+	int min = vec[0];
+	for (int i = 0; i < vec.size(); i++){
+		if (vec[i] < min){
+			min = vec[i];
+		}
+	}
+	return min;
+}
+
+
+// EJERCICIO 17 3
+
+int difMaximoYMinimo (vector <int> vec){
+	return (maximo(vec) - minimo(vec));
+}
+
+
+// EJERCICIO 17 4
+
+int cantCerosOrdenado (vector <int> vec){
+	int cant = 0;
+	int i = 0;
+	while (vec[i] == 0 && i < vec.size()){
+		cant++;
+		i++;
+	}
+	return cant;
+}
+
+int elMasRepetidoOrdenado (vector <int> vec){
+	int masRepetido;
+	int cantApariciones = 0;
+	int i = 0;
+	int cont;
+	while (i < vec.size()-1 || masRepetido == (vec.size() /2)){
+		cont = 0;
+		while (vec[i] == vec[i+1]){
+			i++;
+			cont++;
+		}
+		if (cantApariciones < cont){
+			cantApariciones = cont;
+			masRepetido = vec[i];
+		}
+		i++;
+	}
+	return masRepetido;
+}
+
+int difMaximoYMinimoOrdenado (vector <int> vec){
+	return (vec[vec.size()-1] - vec[0]);
+}
+
+
+// EJERCICIO 18 1
+
+int sumaCerosYUnos (vector <int> vec){
+	int suma = 0;
+	for (int i = 0; i < vec.size(); i++){
+		if (vec[i] == 1){
+			suma++;
+		}
+	}
+	return suma;
+}
+
+
+// EJERCICIO 18 2
+
+int sumaCerosYUnosOrdenado (vector <int> vec){
+	int suma = 0;
+	int i = 0;
+	while (vec[i] == 0 && i < vec.size()){
+		i++;
+	}
+	suma = vec.size() - i;
+	return suma;
+}
+
+
+// EJERCICIO 18 3
+
+int suma15y22 (vector <int> vec){
+	int suma;
+	int i = 0;
+	while (vec[i] == 15 && i < vec.size()){
+		i++;
+	}
+	suma = (15 * i) + (22 * (vec.size()-i));
+	return suma;
+}
+
+
+// EJERCICIO 19
+
+vector <int> reconstruye (vector <int> vec){
+	return vec;
+}
+
+
+// EJERCICIO 20
+
+vector <int> dosMitades (vector <int> vec){
+
+	return vec;
+}
+
+
+// EJERCICIO 21
+
+vector <int> merge (vector <int> vec1, vector <int> vec2){
+	vector <int> result;
+
+
 	return result;
 }
