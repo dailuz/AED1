@@ -89,19 +89,98 @@ int main (){
 
     //cout << ordenInverso(s3);
 
-	vector <string> vec4 (3);
+	/*vector <string> vec4 (3);
 	vec4 [0] = "justifying#lines#by########";
 	vec4 [1] = "inserting#extra#blanks#is##";
 	vec4 [2] = "one#task#of#a#text#editor.#";
 
 	for (int i = 0; i < justificar(vec4).size(); i++){
 			cout  << justificar(vec4)[i] << endl;
-	}
+	}*/
 
 	/*for (int i = 0; i < partirEnLineas(s,c).size(); i++){
 		cout  << partirEnLineas(s,c)[i] << endl;
 	}*/
 
+
+	vector <int> vec5 (7);
+	vec5 [0] = 14;
+	vec5 [1] = 126;
+	vec5 [2] = 11;
+	vec5 [3] = 4;
+	vec5 [4] = 8;
+	vec5 [5] = -3;
+	vec5 [6] = 0;
+
+	/*for (int i = 0; i < insertionSort(vec5).first.size(); i++){
+		cout << insertionSort(vec5).first[i] << ",";
+	}
+	cout << endl << insertionSort(vec5).second << " pasos" << endl;
+
+	for (int i = 0; i < selectionSort(vec5).first.size(); i++){
+		cout << selectionSort(vec5).first[i] << ",";
+	}
+	cout << endl << selectionSort(vec5).second << " pasos" << endl;
+
+	for (int i = 0; i < bubbleSort(vec5).first.size(); i++){
+			cout << bubbleSort(vec5).first[i] << ",";
+		}
+	cout << endl << bubbleSort(vec5).second << " pasos";*/
+
+	vector <int> v1 (5);
+	v1 [0] = 1;
+	v1 [1] = 2;
+	v1 [2] = 3;
+	v1 [3] = 4;
+	v1 [4] = 5;
+
+	vector <int> v2 (5);
+	v2 [0] = 5;
+	v2 [1] = 4;
+	v2 [2] = 3;
+	v2 [3] = 2;
+	v2 [4] = 1;
+
+	vector <int> v3 (5);
+	v3 [0] = 1;
+	v3 [1] = 3;
+	v3 [2] = 5;
+	v3 [3] = 2;
+	v3 [4] = 4;
+
+	vector <int> v4 (6);
+	v4 [0] = 1;
+	v4 [1] = 1;
+	v4 [2] = 1;
+	v4 [3] = 2;
+	v4 [4] = 2;
+	v4 [5] = 2;
+
+	vector <int> v5 (8);
+	v5 [0] = 1;
+	v5 [1] = 2;
+	v5 [2] = 1;
+	v5 [3] = 2;
+	v5 [4] = 1;
+	v5 [5] = 2;
+	v5 [6] = 1;
+	v5 [7] = 2;
+
+	vector <int> v6 (7);
+	v6 [0] = 1;
+	v6 [1] = 10;
+	v6 [2] = 50;
+	v6 [3] = 30;
+	v6 [4] = 25;
+	v6 [5] = 4;
+	v6 [6] = 6;
+
+	for (int i = 0; i < ordenar(v6).size(); i++){
+		for (int j = 0; j < ordenar(v6)[i].first.size(); j++){
+			cout << ordenar(v6)[i].first[j];
+		}
+		cout << ": " << ordenar(v6)[i].second << " pasos" << endl;
+	}
 
     return 0;
 }
