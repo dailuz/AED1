@@ -709,3 +709,21 @@ vector <int> merge (vector <int> vec1, vector <int> vec2){
 	}
 	return result;
 }
+
+
+// EJERCICIO 22
+
+vector <int> kValoresMasCercanosAN (vector <int> vec, int n, int k){
+	vector <int> result;
+	
+	return result;
+}
+
+
+// EJERCICIO 24
+
+int cantElementosAIntercambiar (vector <int> vec){
+	int result = 0;
+	
+	return result;
+}
