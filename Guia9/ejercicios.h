@@ -48,3 +48,4 @@ int suma15y22 (vector <int> vec);
 vector <int> reconstruye (vector <int> vec);
 vector <int> dosMitades (vector <int> vec);
 vector <int> merge (vector <int> vec1, vector <int> vec2);
+vector <int> kValoresMasCercanosAN (vector <int> vec, int n, int k);
