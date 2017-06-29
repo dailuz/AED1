@@ -687,7 +687,25 @@ vector <int> dosMitades (vector <int> vec){
 
 vector <int> merge (vector <int> vec1, vector <int> vec2){
 	vector <int> result;
+	int i = 0;
+	int j = 0;
 
-
+	while (i < vec1.size() && j < vec2.size()){
+		if (vec1[i] < vec2[j]){
+			result.push_back (vec1[i]);
+			i++;
+		}else{
+			result.push_back (vec2[j]);
+			j++;
+		}
+	}
+	while (i < vec1.size()){
+		result.push_back (vec1[i]);
+		i++;
+	}
+	while (j < vec1.size()){
+		result.push_back (vec2[j]);
+		j++;
+	}
 	return result;
 }
